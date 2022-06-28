@@ -1,6 +1,6 @@
 pipeline {
   triggers {
-    oc get template -n openshift | grep rails
+    pollSCM ('H/5 * * * *')
   }
   options {
     disableConcurrentBuilds()
